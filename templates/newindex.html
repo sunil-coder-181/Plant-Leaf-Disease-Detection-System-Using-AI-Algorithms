@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Plant Disease Classification Using Deep Learning</title>
+    <link href="{{ url_for('static', filename='css/bootstrap.css') }}" rel="stylesheet">
+    <script src="{{ url_for('static', filename='js/jquery.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.js') }}"></script>
+    <link href="{{ url_for('static', filename='css/test.css') }}" rel="stylesheet">
+    <script src="{{ url_for('static', filename='js/newjs.js') }}"></script>
+</head>
+
+<body>
+    <style>
+        *
+        {
+            box-sizing: border-box;
+        }
+    </style>
+    <nav class="navbar narbar-dark bg-dark my-5 ">
+        <div class="container col-4">
+            <a class="navbar-brand" href="#">Plant Disease Classification Using Deep Learning</a>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <form action="/predict" method="post" enctype="multipart/form-data">
+           <center> <div class="form-group" >
+                <label for="file" class="my-4">Upload an image</label>
+                <input type="file" class=" " id="file" name="file">
+            </div>
+            <button type="submit" class="btn btn-secondary">Predict</button></center>
+        </form>
+        <div id="result" class="loader col-4"></div>
+    </div>
+</body>
+
+</html>
